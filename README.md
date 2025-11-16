@@ -24,3 +24,21 @@
 - **Headers:**
   - `Authorization: Bearer <token>`
   - `Accept: application/json`
+# Flask ML API (`flask-api/`)
+
+Endpoints:
+- `POST /predict` – classify emotions
+- `POST /generate` – generate implicit meanings
+- `POST /analyze_reviews` – full pipeline: generate → classify → summarize
+- `POST /summarize_topics` – summarize a set of texts
+- `GET /health` – health check
+
+## Run locally
+
+```bash
+cd flask-api
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env  # fill Reddit credentials if needed
+python app.py         # starts on port 5000
