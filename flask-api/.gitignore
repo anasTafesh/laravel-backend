@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual envs
+.venv/
+venv/
+
+# Heavy model dirs – keep folders, ignore contents
+bart_paracomet/*
+bart_summarizer/*
+classifier/*
+!bart_paracomet/.gitignore
+!bart_summarizer/.gitignore
+!classifier/.gitignore
+.env
